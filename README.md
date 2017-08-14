@@ -52,6 +52,8 @@ decomposition on. Each data set has about five days worth of minute prices and v
 To get started simply download the module and run Main.py in a terminal. Then input a stock ticker from the list of provided symbols
 to decompose volatility for that stock's minute prices, output CSV data files will appear in 'Volatility Data/'.
 
+![Example](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Example%20Usage.png?raw=true)
+
 If you have a CSV file of minute prices for a company, then just use the DailyVolDecomposition.py script and change
 the path variable to point to the CSV file. The script will decompose volatility for an arbitrary amount of days
 but make sure your CSV file is in the style of the supplied minute data CSV files with the same column headers.
@@ -63,9 +65,9 @@ install them using your preferred package manager before using this module.
 
 ## Built With
 
-* [Numpy](https://github.com/numpy/numpy) - For logarithm function
-* [Pandas](https://github.com/pandas-dev/pandas) - Used for data matrix management and parsing
-* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) - Used for HTML scraping
+* [Numpy](https://github.com/numpy/numpy) - Logarithms
+* [Pandas](https://github.com/pandas-dev/pandas) - Data matrix parsing and creation
+* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) - HTML scraping
 
 ## License
 
