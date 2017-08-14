@@ -49,7 +49,7 @@ decomposition on. Each data set has about five days worth of minute prices and v
 
 ## Getting Started
 
-To get started simply download the module and run Main.py. Then input a stock ticker from the list of provided symbols
+To get started simply download the module and run Main.py in a terminal. Then input a stock ticker from the list of provided symbols
 to decompose volatility for that stock's minute prices, output CSV data files will appear in 'Volatility Data/'.
 
 If you have a CSV file of minute prices for a company, then just use the DailyVolDecomposition.py script and change
