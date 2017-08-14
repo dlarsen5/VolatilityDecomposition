@@ -1,7 +1,7 @@
 # Volatility Decomposition
 
-Asset prices are usually modeled as a continuous diffusion process with random jumps. By decomposing a asset's
-price variance into continuous and jump components, better risk management and asset allocation can be achieved.
+Asset prices are usually modeled as a continuous diffusion process with random jumps. By decomposing an asset's
+price variance into continuous and jump components, better risk management and asset allocation for a portfolio can be achieved.
 
 In order to compute price variations, returns are first calculated and normalized by taking the logarithm of
 price t and t-1:
