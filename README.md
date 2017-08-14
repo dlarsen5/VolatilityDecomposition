@@ -18,7 +18,7 @@ Realized variation (RV) is the also the sum of squared returns, which yields a s
 
 ![RV](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Realized%20Variation.png?raw=true)
 
-As referenced in Barndorff-Nielsen, Bipower Variation (BV) is the sum of the product of absolute time series returns:
+As referenced in Barndorff-Nielsen(2004), Bipower Variation (BV) is the sum of the product of absolute time series returns:
 
 ![BV](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Bipower%20Variation.png?raw=true)
 
@@ -27,18 +27,18 @@ of the returns will will shrink to zero as the sampling interval shrinks to zero
 
 The implication from this fact about BV is that the jump component of variance can be measured non-parametrically by
 the difference between RV and BV, with the logarithm of RV and BV delivering more stable results
-(Huang and Tauchen (2005)).
+(Huang, Tauchen (2005)).
 
 By comparing the continuous variation (BV) to the jump variation (ln(RV) - ln(BV)), a better view of public vs. private
-information can also be established, with an observation being private information is incorporated into prices
-slowly (continuous variance) as investors do not wish to reveal their trading decisions and public information
-incorporated into an asset's price immediately (jump variation) as investors react to newly disclosed news.
+information can also be established. An observation is that private information is incorporated into an asset's price
+gradually (continuous variance) as investors do not wish to reveal their trading decisions while public information is
+incorporated into an asset's price immediately (jump variation) as investors react to newly disclosed data.
 
 This code builds from several papers:
 
-* [Wang, Huang 2012](https://pdfs.semanticscholar.org/a2c3/876aa60c8b7944923b2e8fd637062631abeb.pdf)
-* [Barndorff, Nielsen 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.203.3772&rep=rep1&type=pdf)
-* [Huang, Tauchen 2005](http://public.econ.duke.edu/~get/browse/courses/201/spr11/2010-PRESENTATIONS/2010-01-20-Tauchen/HT-JFEC-2005.pdf)
+* [Wang, Huang (2012)](https://pdfs.semanticscholar.org/a2c3/876aa60c8b7944923b2e8fd637062631abeb.pdf)
+* [Barndorff-Nielsen (2004)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.203.3772&rep=rep1&type=pdf)
+* [Huang, Tauchen (2005)](http://public.econ.duke.edu/~get/browse/courses/201/spr11/2010-PRESENTATIONS/2010-01-20-Tauchen/HT-JFEC-2005.pdf)
 
 The code is also my personal code used in an academic paper I am currently co-authoring with one of my university
 professors in which we study the jump and continuous variances for all stocks within the S&P 500 index and analyze
@@ -55,7 +55,7 @@ to decompose volatility for that stock's minute prices, output CSV data files wi
 ![Example](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Example%20Usage.png?raw=true)
 
 If you have a CSV file of minute prices for a company, then just use the DailyVolDecomposition.py script and change
-the path variable to point to the CSV file. The script will decompose volatility for an arbitrary amount of days
+the path variable to point to your CSV file. The script will decompose volatility for an arbitrary amount of days
 but make sure your CSV file is in the style of the supplied minute data CSV files with the same column headers.
 
 ### Prerequisites
