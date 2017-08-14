@@ -6,21 +6,21 @@ price variance into continuous and jump components, better risk management and a
 In order to compute price variations, returns are first calculated and normalized by taking the logarithm of
 price t and t-1:
 
-(../Volatility Decomposition/Equation Images/Log Returns.png)
+![Log Returns](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Log%20Returns.png?raw=true)
 
 By recording a price time series at short time intervals (minute intervals used), the variation of an asset's price is
 measured by looking at the sums of products of returns calculated over very small time periods, also known as Quadratic
 Variation:
 
-(../Volatility Decomposition/Equation Images/Quadratic Variation.png)
+![QV](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Quadratic%20Variation.png?raw=true)
 
 Realized variation (RV) is the also the sum of squared returns, which yields a similar measure of price variation:
 
-(../Volatility Decomposition/Equation Images/Realized Variation.png)
+![RV](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Realized%20Variation.png?raw=true)
 
 As referenced in Barndorff-Nielsen, Bipower Variation (BV) is the sum of the product of absolute time series returns:
 
-(../Volatility Decomposition/Equation Images/Bipower Variation.png)
+![BV](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Bipower%20Variation.png?raw=true)
 
 BV differs from RV in that as sampling frequency increases, price jumps will not affect BV since at least one
 of the returns will will shrink to zero as the sampling interval shrinks to zero.
@@ -36,7 +36,7 @@ incorporated into an asset's price immediately (jump variation) as investors rea
 
 This code builds from several papers:
 
-* [Wang, Huang 2012] (https://pdfs.semanticscholar.org/a2c3/876aa60c8b7944923b2e8fd637062631abeb.pdf)
+* [Wang, Huang 2012](https://pdfs.semanticscholar.org/a2c3/876aa60c8b7944923b2e8fd637062631abeb.pdf)
 * [Barndorff, Nielsen 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.203.3772&rep=rep1&type=pdf)
 * [Huang, Tauchen 2005](http://public.econ.duke.edu/~get/browse/courses/201/spr11/2010-PRESENTATIONS/2010-01-20-Tauchen/HT-JFEC-2005.pdf)
 

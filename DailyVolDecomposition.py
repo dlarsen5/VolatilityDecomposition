@@ -27,12 +27,8 @@ def get_shares_outstanding(symbol):
         if 'Index' == data[0]:
             shrs_outstand = data[9]
 
-    mil = 'M'
-    bil = 'B'
-
     #convert to a million or billion shares
-
-    if shrs_outstand[-1] == mil:
+    if shrs_outstand[-1] == 'M':
         num = float(shrs_outstand[:-1])
         shares_outstanding = num * 1000000
     else:

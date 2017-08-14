@@ -52,7 +52,7 @@ def main():
 
 if __name__ == '__main__':
 
-    log_file = 'Logs/Run_Log.log'
+    log_file = 'Logs/run.log'
     if os.path.exists(log_file):
         os.remove(log_file)
 

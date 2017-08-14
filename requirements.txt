@@ -1,3 +1,4 @@
+bs4
 numpy==1.12.1
 pandas==0.20.2
 beautifulsoup4==4.5.3
