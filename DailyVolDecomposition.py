@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from numpy import nan
 import logging
 from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen
@@ -83,7 +82,7 @@ def calculate(frame,shares_outstanding):
         try:
             RV = np.log(pre_log)
         except:
-            RV = nan
+            RV = np.nan
 
         return RV
 
@@ -95,7 +94,7 @@ def calculate(frame,shares_outstanding):
         try:
             BV = np.log(pre_log)
         except:
-            BV = nan
+            BV = np.nan
 
         return BV
 
@@ -134,10 +133,10 @@ def calculate(frame,shares_outstanding):
         bv = bipower_variation(log_returns)
 
         # error checking
-        if rv or bv is not nan:
+        if rv or bv is not np.nan:
             diff = rv - bv
         else:
-            diff = nan
+            diff = np.nan
 
         #volume
         volume_returns = single_day_standard_volume_returns(single_day_five_min_volumes)
@@ -146,10 +145,10 @@ def calculate(frame,shares_outstanding):
         vbv = bipower_variation(volume_returns)
 
         #error checking
-        if vrv or vbv is not nan:
+        if vrv or vbv is not np.nan:
             vdiff = vrv - vbv
         else:
-            vdiff = nan
+            vdiff = np.nan
 
         total_volume = sum(single_day_five_min_volumes)
         close_price = frame.iloc[end - 1]['Close']
@@ -175,8 +174,10 @@ def process(symbol):
     """
 
     path = 'Minute Prices/%s.csv' % symbol
+    
     try:
         shares_outstanding = get_shares_outstanding(symbol)
+        
     except Exception as e:
         logging.error('%s had error: %s' % (symbol,e))
         return None
