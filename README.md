@@ -4,7 +4,7 @@ Asset prices are usually modeled as a continuous diffusion process with random j
 price variance into continuous and jump components, better risk management and asset allocation for a portfolio can be achieved.
 
 In order to compute price variations, returns are first calculated and normalized by taking the logarithm of
-price t and t-1:
+price S and S-1:
 
 ![Log Returns](https://github.com/dlarsen5/VolatilityDecomposition/raw/master/img/Log%20Returns.png?raw=true)
 
