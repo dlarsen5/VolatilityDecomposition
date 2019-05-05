@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import logging
 from bs4 import BeautifulSoup as bs
-from urllib.request import urlopen
+from urllib2 import urlopen
 
 
 def get_shares_outstanding(symbol):
